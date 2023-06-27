@@ -1,0 +1,14 @@
+/*index.html 에 여러 css 링크를 넣을 필요 없이
+style.css 에 아래 @import 기능을 사용하여,
+css 여러 파일들을 주입 함으로써 index.html 에는 style.css 하나만 넣어도
+적용 가능! 오호! 유용하군 */
+/*그런데.. 로딩이 안되네? ... link 가 더 효율적이라고 함; */
+
+@import "reset.css";
+@import "header.css";
+@import "main.css";
+@import "footer.css";
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
