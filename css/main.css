@@ -51,6 +51,22 @@ main {
     font-weight: bold;
 }
 
+@keyframes moving-logo {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.5);
+    }
+    50% {
+         transform: scale(0.5);
+    }
+    100% {
+         transform: scale(1);
+    }
+ }
+ 
+
 .write-btn {
     background-color: #fe6f0f;
     color: white;
@@ -61,6 +77,8 @@ main {
     bottom: 150px;
     right: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: moving-logo 1s infinite; 
+
 }
 
 /* https://getcssscan.com/css-box-shadow-examples */
