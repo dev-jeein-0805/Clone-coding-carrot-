@@ -61,6 +61,19 @@ async def get_image(item_id):
     
     return Response(content=bytes.fromhex(image_bytes), media_type='/image/*')
 
+#프론트엔드에서 Form을 통해서 post로 보낼 것 (새로운 회원가입을 시켜달라는 요청)
+@app.post('/signup')
+def signup(id:Annotated[str, Form()], 
+           password:Annotated[str, Form()],
+           name:Annotated[str, Form()],
+           email:Annotated[str, Form()]):
+    cur.execute(f"""
+                INSERT INTO users(id, name, email, password)
+                VALUES ('{id}', '{name}', '{email}', '{password}')
+                """)
+    con.commit()
+    return '200'
+
 app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
 
 

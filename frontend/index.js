@@ -60,4 +60,4 @@ const fetchList = async () => {
 
 fetchList();
 
-// 최신 순으로 띄우기 위해 Array 를 reverse()로 이용하는 것. 오호.
+// 최신 순으로 띄우기 위해 Array 를 reverse()로 이용하는 것. 
